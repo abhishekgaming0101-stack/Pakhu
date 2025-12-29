@@ -1,23 +1,17 @@
 const startDate = new Date("March 30, 2025 00:00:00").getTime();
 
-function updateCounter() {
-  const startDate = new Date(2025, 2, 30, 11, 38, 0); // 30 March 2025, 11:38 AM
-  const now = new Date();
+function updateTimer() {
+    const now = new Date().getTime();
+    const diff = now - startDate;
 
-  let diff = now - startDate;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
 
-  if (diff < 0) diff = 0;
-
-  const seconds = Math.floor(diff / 1000) % 60;
-  const minutes = Math.floor(diff / (1000 * 60)) % 60;
-  const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-  document.getElementById("days").innerText = days;
-  document.getElementById("hours").innerText = hours;
-  document.getElementById("minutes").innerText = minutes;
-  document.getElementById("seconds").innerText = seconds;
+    document.getElementById("timer").innerHTML =
+        `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
 }
 
-setInterval(updateCounter, 1000);
-updateCounter();
+setInterval(updateTimer, 1000);
+updateTimer();
