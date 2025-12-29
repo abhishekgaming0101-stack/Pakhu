@@ -76,77 +76,23 @@ body {
 }
 
 /* COUNTER */
-.love-counter {
-  text-align: center;
-  margin: 80px 0;
-  font-family: "Poppins", sans-serif;
-  color: #fff;
+.counter-section {
+    margin-top: 20px;
 }
 
-.counter-top,
-.counter-bottom {
-  letter-spacing: 3px;
-  font-size: 14px;
-  opacity: 0.85;
+.counter-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #ffd6e0;
+    margin: 8px 0;
 }
 
-.counter-love {
-  margin-top: 15px;
-  font-size: 16px;
-  letter-spacing: 2px;
-  color: #ffb6c1;
+#timer {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff8fab;
+    margin: 10px 0;
 }
-
-.heart {
-  width: 220px;
-  height: 200px;
-  background: #ff4d6d;
-  position: relative;
-  margin: 25px auto;
-  transform: rotate(-45deg);
-  animation: pulse 1.5s infinite;
-  box-shadow: 0 0 30px rgba(255, 77, 109, 0.6);
-}
-
-.heart::before,
-.heart::after {
-  content: "";
-  width: 220px;
-  height: 200px;
-  background: #ff4d6d;
-  border-radius: 50%;
-  position: absolute;
-}
-
-.heart::before {
-  top: -110px;
-  left: 0;
-}
-
-.heart::after {
-  left: 110px;
-  top: 0;
-}
-
-.time {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
-  width: 100%;
-  padding: 0 10px;
-}
-
-@keyframes pulse {
-  0% { transform: rotate(-45deg) scale(1); }
-  50% { transform: rotate(-45deg) scale(1.05); }
-  100% { transform: rotate(-45deg) scale(1); }
-}
-
 
 /* FINAL LOVE TEXT */
 .final-love-text {
@@ -155,4 +101,3 @@ body {
     font-size: 22px;
     color: #ffb3c6;
 }
-
